@@ -1,0 +1,1 @@
+SELECT `no`,`limpasH`,`limpasQ`,`irigasiKNH`,`irigasiKNQ`,`irigasiKRH`,`irigasiKRQ`,`totalDebit` FROM `sup_rancaekek`.`blangko08`,`admin`,`personil`,`di`,`jabatan`,`rantingpengamat`,`bentukbendung` WHERE `id_blangkoO08`="1"

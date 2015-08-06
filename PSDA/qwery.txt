@@ -1,0 +1,5 @@
+SELECT `di`.`nm_di`,`di`.`nr_di`,`bentukbendung`.`nm_bentukbendung`,`di`.`sungai`,`rantingpengamat`.`nm_rantingpengamat`,`di`.`tot_sawah`,`di`.`jum_petaktersier`,`di`.`tot_luaswilayah`,`di`.`kab` FROM `di`,`bentukbendung`,`rantingpengamat` WHERE `di`.`id_bentukbendung`=`bentukbendung`.`id_bentukbendung` AND `di`.`id_rantingpengamat`=`rantingpengamat`.`id_rantingpengamat`;
+
+SELECT * FROM users WHERE username='pangeran' AND `password`=(MD5('pangeran')) AND blokir='N'
+
+SELECT `username`,`status`,`personil`.`nm_personil`,`di`.`nm_di`,`rantingpengamat`.`nm_rantingpengamat` FROM admin,personil,di,rantingpengamat WHERE admin.id_admin = personil.id_personil AND personil.id_di = di.id_di AND di.id_rantingpengamat = rantingpengamat.id_rantingpengamat AND username='pangeran' AND `password`=(MD5('pangeran')) AND `status`='admin'; 

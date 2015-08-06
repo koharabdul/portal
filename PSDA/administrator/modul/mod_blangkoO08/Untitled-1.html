@@ -1,0 +1,93 @@
+<!DOCTYPE html PUBLIC -//W3C//DTD XHTML 1.0 Transitional//EN http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd>
+<html xmlns=http://www.w3.org/1999/xhtml>
+<head>
+<meta http-equiv=Content-Type content=text/html; charset=iso-8859-1 />
+<title>Untitled Document</title>
+</head>
+
+<body>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+  <table width=95% align=left border=1>
+  <tr>
+    <td colspan=10 align=center><b>PENCATATAN DEBIT BANGUNGN PENGAMBILAN / <br>
+    PENCATATAN DEBIT SUNGAI  </b></td>
+    
+  </tr>
+  <tr>
+  
+  <td colspan=8>&nbsp;</td>
+  <td colspan=2><table border=1 bordercolor=#CCCCCC align=right><tr><td><b>Blangko 08 - O </b></tr></td></table><td width="11%"></td>
+  </tr>
+  <tr>
+    <td width=6% height=40>Sugai</td>
+  <td width="1%">:</td>
+    <td colspan=2 ><input type = text class=span2 style=margin:inherit value='$_SESSION[limpassungai]' readonly></td>
+	<td width="25%">&nbsp;</td>
+    <td width=14% >Kabupaten</td>
+  <td align=right>:</td>
+    <td colspan=3><input name=text4 type = text class=span2 style=margin:inherit value='$_SESSION[kabupaten]' readonly/></td>
+  
+  </tr>
+  <tr>
+    <td height=40>Bendung</td>
+  <td>:</td>
+    <td colspan=2><input name=text type = text class=span2 style=margin:inherit value='$_SESSION[daerahirigasi]' readonly/></td>
+	<td>&nbsp;</td>
+    <td >Ranting/Pengamat</td>
+  <td align=right>:</td>
+    <td colspan=3><input name=text4 type = text class=span2 style=margin:inherit value='$_SESSION[rantingpengamat]' readonly/></td>
+  </tr>
+  <tr>
+    <td height=40>Daerah Irigasi </td>
+  <td>:</td>
+    <td colspan=2><input name=text2 type = text class=span2 style=margin:inherit value='$_SESSION[daerahirigasi]' readonly/></td>
+	<td>&nbsp;</td>
+    <td >Bag. Pelaks. Kegiatan </td>
+  <td align=right>:</td>
+    <td colspan=3><input name=text4 type = text class=span2 style=margin:inherit value='$_SESSION[bagpelaksana]'readonly/></td>
+  </tr>
+  <tr>
+    <td height=40>Total Luas Sawah Irigasi </td>
+  <td>:</td>
+    <td width=15%><input name=text3 type = text class=span2 style=margin:inherit value='$_SESSION[totalsawah]' readonly/></td>
+  <td width=5%>ha</td>
+    <td >Periode Pengambilan Air Tanggal </td>
+  
+  
+    <td width=14%>
+  
+  <select name='menu_utama1' class='span2' style=margin:inherit>
+            
+    ";
+      $tampil=mysql_query("SELECT * FROM tanggal ORDER BY id_tgl");
+            while($r=mysql_fetch_array($tampil)){
+              echo "<option value=$r[id_tgl]>$r[nm_tgl]</option>";
+            }
+      echo"</select></td>
+  <td width=3% >Bln</td>
+  <td width=12%><select name='menu_utama2' class='span2' style=margin:inherit>
+            
+      ";
+      $tampil=mysql_query("SELECT * FROM bulan ORDER BY id_bulan");
+            while($r=mysql_fetch_array($tampil)){
+              echo "<option value=$r[id_bulan]>$r[nm_bulan]</option>";
+            }
+      echo"</select>
+    </td>
+  <td width=8%><select name='menu_utama3' class='span1' style=margin:inherit>
+            
+      ";
+      $tampil=mysql_query("SELECT * FROM tahun ORDER BY thn DESC");
+            while($r=mysql_fetch_array($tampil)){
+              echo "<option value=$r[id_tahun]>$r[thn]</option>";
+            }
+      echo"</select>
+    </td>
+	<td></td>
+  
+ 
+  </tr>
+</table>
+</body>
+</html>
